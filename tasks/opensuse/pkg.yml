@@ -3,3 +3,10 @@
   zypper:
     name: monit
     state: present
+
+- name: pkg - fix run folder
+  file:
+    path: /run/monit
+    state: directory
+    owner: root
+    group: root
