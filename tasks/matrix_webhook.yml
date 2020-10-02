@@ -1,0 +1,9 @@
+---
+- name: matrix_webhook - Setup Matrix Webhook
+  template:
+    src: matrix_send.rb.j2
+    dest: /usr/local/bin/monit_matrix_send.rb
+    owner: root
+    group: root
+    mode: 0755
+  when: monit_matrix_webhook_enabled
