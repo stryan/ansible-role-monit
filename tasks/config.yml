@@ -5,6 +5,9 @@
 - include_vars: redhat.yml
   when: ansible_os_family == "RedHat"
 
+- include_vars: opensuse.yml
+  when: ansible_os_family == "Suse"
+
 - name: create includes folder
   file: path={{ monit_includes }} state=directory mode=0600
 

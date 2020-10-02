@@ -1,0 +1,5 @@
+---
+- name: pkg - Install package
+  zypper:
+    name: monit
+    state: present
